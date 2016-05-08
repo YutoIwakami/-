@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3F912AF1CCBC4E8004267B7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F912AE1CCBC4E8004267B7 /* Launch Screen.storyboard */; };
 		D8103B7B1CAE17C500811065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8103B7A1CAE17C500811065 /* AppDelegate.swift */; };
 		D8103B7D1CAE17C500811065 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8103B7C1CAE17C500811065 /* ViewController.swift */; };
 		D8103B801CAE17C500811065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8103B7E1CAE17C500811065 /* Main.storyboard */; };
 		D8103B821CAE17C500811065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8103B811CAE17C500811065 /* Assets.xcassets */; };
-		D8103B851CAE17C500811065 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8103B831CAE17C500811065 /* LaunchScreen.storyboard */; };
 		D8103B901CAE17C500811065 /* __BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8103B8F1CAE17C500811065 /* __BookTests.swift */; };
 		D8103B9B1CAE17C500811065 /* __BookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8103B9A1CAE17C500811065 /* __BookUITests.swift */; };
+		D8103BA91CAE21EE00811065 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8103BA81CAE21EE00811065 /* TableViewController.swift */; };
+		D8103BE61CAE4EDB00811065 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8103BE41CAE4EDB00811065 /* TableViewCell.swift */; };
+		D8103BE71CAE4EDB00811065 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8103BE51CAE4EDB00811065 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +37,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D8103B771CAE17C500811065 /* 暗記Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "暗記Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F912AE1CCBC4E8004267B7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D8103B771CAE17C500811065 /* メモ帳.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "メモ帳.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8103B7A1CAE17C500811065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8103B7C1CAE17C500811065 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8103B7F1CAE17C500811065 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8103B811CAE17C500811065 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D8103B841CAE17C500811065 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8103B861CAE17C500811065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8103B8B1CAE17C500811065 /* 暗記BookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "暗記BookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8103B8B1CAE17C500811065 /* メモ帳.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "メモ帳.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8103B8F1CAE17C500811065 /* __BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __BookTests.swift; sourceTree = "<group>"; };
 		D8103B911CAE17C500811065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8103B961CAE17C500811065 /* 暗記BookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "暗記BookUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8103B961CAE17C500811065 /* メモ帳.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "メモ帳.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8103B9A1CAE17C500811065 /* __BookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __BookUITests.swift; sourceTree = "<group>"; };
 		D8103B9C1CAE17C500811065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8103BA81CAE21EE00811065 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		D8103BE41CAE4EDB00811065 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D8103BE51CAE4EDB00811065 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +93,9 @@
 		D8103B781CAE17C500811065 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D8103B771CAE17C500811065 /* 暗記Book.app */,
-				D8103B8B1CAE17C500811065 /* 暗記BookTests.xctest */,
-				D8103B961CAE17C500811065 /* 暗記BookUITests.xctest */,
+				D8103B771CAE17C500811065 /* メモ帳.app */,
+				D8103B8B1CAE17C500811065 /* メモ帳.xctest */,
+				D8103B961CAE17C500811065 /* メモ帳.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,10 +105,13 @@
 			children = (
 				D8103B7A1CAE17C500811065 /* AppDelegate.swift */,
 				D8103B7C1CAE17C500811065 /* ViewController.swift */,
+				D8103BA81CAE21EE00811065 /* TableViewController.swift */,
 				D8103B7E1CAE17C500811065 /* Main.storyboard */,
 				D8103B811CAE17C500811065 /* Assets.xcassets */,
-				D8103B831CAE17C500811065 /* LaunchScreen.storyboard */,
 				D8103B861CAE17C500811065 /* Info.plist */,
+				D8103BE41CAE4EDB00811065 /* TableViewCell.swift */,
+				D8103BE51CAE4EDB00811065 /* TableViewCell.xib */,
+				A3F912AE1CCBC4E8004267B7 /* Launch Screen.storyboard */,
 			);
 			path = "暗記Book";
 			sourceTree = "<group>";
@@ -128,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D8103B761CAE17C500811065 /* 暗記Book */ = {
+		D8103B761CAE17C500811065 /* メモ帳 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8103B9F1CAE17C500811065 /* Build configuration list for PBXNativeTarget "暗記Book" */;
+			buildConfigurationList = D8103B9F1CAE17C500811065 /* Build configuration list for PBXNativeTarget "メモ帳" */;
 			buildPhases = (
 				D8103B731CAE17C500811065 /* Sources */,
 				D8103B741CAE17C500811065 /* Frameworks */,
@@ -140,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = "暗記Book";
+			name = "メモ帳";
 			productName = "暗記Book";
-			productReference = D8103B771CAE17C500811065 /* 暗記Book.app */;
+			productReference = D8103B771CAE17C500811065 /* メモ帳.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D8103B8A1CAE17C500811065 /* 暗記BookTests */ = {
+		D8103B8A1CAE17C500811065 /* メモ帳Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8103BA21CAE17C500811065 /* Build configuration list for PBXNativeTarget "暗記BookTests" */;
+			buildConfigurationList = D8103BA21CAE17C500811065 /* Build configuration list for PBXNativeTarget "メモ帳Tests" */;
 			buildPhases = (
 				D8103B871CAE17C500811065 /* Sources */,
 				D8103B881CAE17C500811065 /* Frameworks */,
@@ -158,14 +167,14 @@
 			dependencies = (
 				D8103B8D1CAE17C500811065 /* PBXTargetDependency */,
 			);
-			name = "暗記BookTests";
+			name = "メモ帳Tests";
 			productName = "暗記BookTests";
-			productReference = D8103B8B1CAE17C500811065 /* 暗記BookTests.xctest */;
+			productReference = D8103B8B1CAE17C500811065 /* メモ帳.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D8103B951CAE17C500811065 /* 暗記BookUITests */ = {
+		D8103B951CAE17C500811065 /* メモ帳UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8103BA51CAE17C500811065 /* Build configuration list for PBXNativeTarget "暗記BookUITests" */;
+			buildConfigurationList = D8103BA51CAE17C500811065 /* Build configuration list for PBXNativeTarget "メモ帳UITests" */;
 			buildPhases = (
 				D8103B921CAE17C500811065 /* Sources */,
 				D8103B931CAE17C500811065 /* Frameworks */,
@@ -176,9 +185,9 @@
 			dependencies = (
 				D8103B981CAE17C500811065 /* PBXTargetDependency */,
 			);
-			name = "暗記BookUITests";
+			name = "メモ帳UITests";
 			productName = "暗記BookUITests";
-			productReference = D8103B961CAE17C500811065 /* 暗記BookUITests.xctest */;
+			productReference = D8103B961CAE17C500811065 /* メモ帳.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +201,12 @@
 				TargetAttributes = {
 					D8103B761CAE17C500811065 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 7YD53H8NXP;
+						DevelopmentTeam = U83LZLB27R;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+						};
 					};
 					D8103B8A1CAE17C500811065 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -206,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D8103B721CAE17C400811065 /* Build configuration list for PBXProject "暗記Book" */;
+			buildConfigurationList = D8103B721CAE17C400811065 /* Build configuration list for PBXProject "メモ帳" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -219,9 +233,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D8103B761CAE17C500811065 /* 暗記Book */,
-				D8103B8A1CAE17C500811065 /* 暗記BookTests */,
-				D8103B951CAE17C500811065 /* 暗記BookUITests */,
+				D8103B761CAE17C500811065 /* メモ帳 */,
+				D8103B8A1CAE17C500811065 /* メモ帳Tests */,
+				D8103B951CAE17C500811065 /* メモ帳UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,8 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8103B851CAE17C500811065 /* LaunchScreen.storyboard in Resources */,
+				D8103BE71CAE4EDB00811065 /* TableViewCell.xib in Resources */,
 				D8103B821CAE17C500811065 /* Assets.xcassets in Resources */,
+				A3F912AF1CCBC4E8004267B7 /* Launch Screen.storyboard in Resources */,
 				D8103B801CAE17C500811065 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8103B7D1CAE17C500811065 /* ViewController.swift in Sources */,
+				D8103BE61CAE4EDB00811065 /* TableViewCell.swift in Sources */,
+				D8103BA91CAE21EE00811065 /* TableViewController.swift in Sources */,
 				D8103B7B1CAE17C500811065 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,12 +301,12 @@
 /* Begin PBXTargetDependency section */
 		D8103B8D1CAE17C500811065 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D8103B761CAE17C500811065 /* 暗記Book */;
+			target = D8103B761CAE17C500811065 /* メモ帳 */;
 			targetProxy = D8103B8C1CAE17C500811065 /* PBXContainerItemProxy */;
 		};
 		D8103B981CAE17C500811065 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D8103B761CAE17C500811065 /* 暗記Book */;
+			target = D8103B761CAE17C500811065 /* メモ帳 */;
 			targetProxy = D8103B971CAE17C500811065 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -301,14 +318,6 @@
 				D8103B7F1CAE17C500811065 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D8103B831CAE17C500811065 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D8103B841CAE17C500811065 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -401,10 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "暗記Book/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "a.--Book";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = app.MemoBook;
+				PRODUCT_NAME = "メモ帳";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -412,10 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "暗記Book/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "a.--Book";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = app.MemoBook;
+				PRODUCT_NAME = "メモ帳";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -426,8 +441,8 @@
 				INFOPLIST_FILE = "暗記BookTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "a.--BookTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/暗記Book.app/暗記Book";
+				PRODUCT_NAME = "メモ帳";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/メモ帳.app/メモ帳";
 			};
 			name = Debug;
 		};
@@ -438,8 +453,8 @@
 				INFOPLIST_FILE = "暗記BookTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "a.--BookTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/暗記Book.app/暗記Book";
+				PRODUCT_NAME = "メモ帳";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/メモ帳.app/メモ帳";
 			};
 			name = Release;
 		};
@@ -449,7 +464,7 @@
 				INFOPLIST_FILE = "暗記BookUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "a.--BookUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "メモ帳";
 				TEST_TARGET_NAME = "暗記Book";
 				USES_XCTRUNNER = YES;
 			};
@@ -461,7 +476,7 @@
 				INFOPLIST_FILE = "暗記BookUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "a.--BookUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "メモ帳";
 				TEST_TARGET_NAME = "暗記Book";
 				USES_XCTRUNNER = YES;
 			};
@@ -470,7 +485,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D8103B721CAE17C400811065 /* Build configuration list for PBXProject "暗記Book" */ = {
+		D8103B721CAE17C400811065 /* Build configuration list for PBXProject "メモ帳" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8103B9D1CAE17C500811065 /* Debug */,
@@ -479,29 +494,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8103B9F1CAE17C500811065 /* Build configuration list for PBXNativeTarget "暗記Book" */ = {
+		D8103B9F1CAE17C500811065 /* Build configuration list for PBXNativeTarget "メモ帳" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8103BA01CAE17C500811065 /* Debug */,
 				D8103BA11CAE17C500811065 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D8103BA21CAE17C500811065 /* Build configuration list for PBXNativeTarget "暗記BookTests" */ = {
+		D8103BA21CAE17C500811065 /* Build configuration list for PBXNativeTarget "メモ帳Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8103BA31CAE17C500811065 /* Debug */,
 				D8103BA41CAE17C500811065 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D8103BA51CAE17C500811065 /* Build configuration list for PBXNativeTarget "暗記BookUITests" */ = {
+		D8103BA51CAE17C500811065 /* Build configuration list for PBXNativeTarget "メモ帳UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8103BA61CAE17C500811065 /* Debug */,
 				D8103BA71CAE17C500811065 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
