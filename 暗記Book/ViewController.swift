@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /*
         //        stepper.value = fontSize
         //        stepper.minimumValue = 5
         //        stepper.maximumValue = 50
@@ -42,10 +42,12 @@ class ViewController: UIViewController {
             userDefault.removeObjectForKey("text")
             userDefault.removeObjectForKey("time")
         }
+         if userDefault.arrayForKey("text") != nil{
+         saveText = userDefault.arrayForKey("text")!
+         }
+        */
         time.text = " "
-        if userDefault.arrayForKey("text") != nil{
-            saveText = userDefault.arrayForKey("text")!
-        }
+        
         if time.text == ""{
             dateFormatter.locale = NSLocale(localeIdentifier: "en_JP") // ロケールの設定
             dateFormatter.timeStyle = .LongStyle
@@ -56,12 +58,13 @@ class ViewController: UIViewController {
         time.text = timeCell
         textField.text = titleName
         textView.text = text
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func sizePlus(){
-        fontSize = fontSize + 1
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        textView.text = appDelegate.data
     }
     
     @IBAction func save(){
@@ -78,15 +81,17 @@ class ViewController: UIViewController {
             dateFormatter.dateStyle = .LongStyle
             time.text = (dateFormatter.stringFromDate(now))
             
+            
             let key: String = NSUUID().UUIDString
             let textData = ["text":textView.text,"title":textField.text,"time":time.text]
-            
             userDefault.setObject(textData, forKey: key)
-            var keyArray = userDefault.arrayForKey("keys")
-            keyArray?.append(key)
-            saveText.append(textData)
-            userDefault.setObject(keyArray, forKey: "keys")
-            userDefault.setObject(textData, forKey: "text")
+            
+            if let keys = userDefault.objectForKey("keys") as? [String] {
+                var keysArray = keys
+                keysArray.append(key)
+                userDefault.setObject(keysArray, forKey: "keys")
+            }
+            userDefault.synchronize()
         }
     }
     
