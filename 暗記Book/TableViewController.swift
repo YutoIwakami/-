@@ -13,7 +13,7 @@ class TableViewController: UITableViewController ,UIAlertViewDelegate{
     //var saveText: [AnyObject] = []
     let userDefault = NSUserDefaults.standardUserDefaults()
     var keys:[String]? = []
-    var title2:String!
+//    var title2:String!
     var a:Int = 0
     
     override func viewDidLoad() {
@@ -36,15 +36,6 @@ class TableViewController: UITableViewController ,UIAlertViewDelegate{
         }else{
             print("error")
         }*/
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let indexPath = self.tableView.indexPathForSelectedRow
-        let key = keys![(indexPath?.row)!]
-        let dictionary = userDefault.objectForKey(key)
-        appDelegate.data = dictionary as? String
     }
     
     @IBAction func reset(){
@@ -104,6 +95,8 @@ class TableViewController: UITableViewController ,UIAlertViewDelegate{
     
     // Cell が選択された場合
     override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.toKey = keys![indexPath.row]
         performSegueWithIdentifier("toViewController",sender: nil)
         //        let viewController: UIViewController = ViewController()
         //        self.presentViewController(viewController, animated: true, completion: nil)

@@ -46,6 +46,9 @@ class ViewController: UIViewController {
          saveText = userDefault.arrayForKey("text")!
          }
         */
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        
         time.text = " "
         
         if time.text == ""{
@@ -64,7 +67,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        textView.text = appDelegate.data
+        print(appDelegate.toKey)
+        
     }
     
     @IBAction func save(){
