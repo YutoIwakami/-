@@ -1,15 +1,15 @@
-//
-//  ViewController.swift
-//  暗記Book
-//
-//  Created by T80 on 2016/04/01.
-//
-//
+    //
+    //  ViewController.swift
+    //  暗記Book
+    //
+    //  Created by T80 on 2016/04/01.
+    //
+    //
 
-import UIKit
+    import UIKit
 
-class ViewController: UIViewController {
-    
+    class ViewController: UIViewController {
+
     @IBOutlet var textField:UITextField!
     @IBOutlet var textView:UITextView!
     var saveText: [AnyObject] = []
@@ -23,33 +23,13 @@ class ViewController: UIViewController {
     var a:Int = 0
     var fontSize:Double!
     @IBOutlet var stepper:UIStepper!
-    
+
     let now = NSDate() // 現在日時の取得
     let dateFormatter = NSDateFormatter()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        //        stepper.value = fontSize
-        //        stepper.minimumValue = 5
-        //        stepper.maximumValue = 50
-        //        textView.text = "\(stepper.value)"
-        //        fontSize = 15
-        //        textView.font = UIFont.systemFontOfSize(fontSize)
-        
-        if a == 1{
-            userDefault.removeObjectForKey("title")
-            userDefault.removeObjectForKey("text")
-            userDefault.removeObjectForKey("time")
-        }
-         if userDefault.arrayForKey("text") != nil{
-         saveText = userDefault.arrayForKey("text")!
-         }
-        */
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        
-        time.text = " "
+        time.text = "T"
         
         if time.text == ""{
             dateFormatter.locale = NSLocale(localeIdentifier: "en_JP") // ロケールの設定
@@ -63,14 +43,19 @@ class ViewController: UIViewController {
         textView.text = text
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        print(appDelegate.toKey)
         
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        guard let key = appDelegate.toKey else { return }
+        let data = userDefault.objectForKey(key) as! [String : String]
+        print(data)
+        textView.text = data["text"]
+        textField.text = data["title"]
+        time.text = data["time"]
     }
-    
+
     @IBAction func save(){
         self.view.endEditing(true)
         if textField.text == ""{
@@ -81,32 +66,41 @@ class ViewController: UIViewController {
             presentViewController(alert, animated: true, completion: nil)
         }else{
             dateFormatter.locale = NSLocale(localeIdentifier: "en_JP") // ロケールの設定
-            dateFormatter.timeStyle = .LongStyle
-            dateFormatter.dateStyle = .LongStyle
+            dateFormatter.timeStyle = .MediumStyle
+            dateFormatter.dateStyle = .MediumStyle
             time.text = (dateFormatter.stringFromDate(now))
             
-            
             let key: String = NSUUID().UUIDString
-            let textData = ["text":textView.text,"title":textField.text,"time":time.text]
-            userDefault.setObject(textData, forKey: key)
+            print(key)
             
-            if let keys = userDefault.objectForKey("keys") as? [String] {
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            let textData = ["text":textView.text,"title":textField.text,"time":time.text]
+            if appDelegate.toKey == nil{
+            userDefault.setObject(textData, forKey: key)
+            }else{
+                userDefault.setObject(textData, forKey: appDelegate.toKey!)
+            }
+            if let keys = userDefault.valueForKey("keys") as? [String] {
                 var keysArray = keys
                 keysArray.append(key)
+                userDefault.setObject(keysArray, forKey: "keys")
+            } else {
+                let keysArray = [key]
                 userDefault.setObject(keysArray, forKey: "keys")
             }
             userDefault.synchronize()
         }
     }
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-}
+
+    }
 

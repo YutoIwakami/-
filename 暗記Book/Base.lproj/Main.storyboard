@@ -60,7 +60,8 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="kjI-9e-M9B">
                             <connections>
-                                <segue destination="aot-K9-kfM" kind="push" id="KCZ-OS-kKv"/>
+                                <action selector="plus" destination="SSl-8R-Atm" id="6bc-h4-NNl"/>
+                                <segue destination="aot-K9-kfM" kind="push" id="Xur-jO-h4b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -123,7 +124,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="25"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="save" destination="aot-K9-kfM" eventType="touchUpInside" id="8mD-tp-qmA"/>
+                                    <action selector="save" destination="aot-K9-kfM" eventType="touchUpInside" id="wGd-n5-T2P"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -141,6 +142,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1MH-dL-QBL"/>
+        <segue reference="Xur-jO-h4b"/>
     </inferredMetricsTieBreakers>
 </document>

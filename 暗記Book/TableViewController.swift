@@ -12,32 +12,32 @@ class TableViewController: UITableViewController ,UIAlertViewDelegate{
     
     //var saveText: [AnyObject] = []
     let userDefault = NSUserDefaults.standardUserDefaults()
-    var keys:[String]? = []
-//    var title2:String!
+    var keys:[String]?
+    //    var title2:String!
     var a:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.toKey = nil
         a = 0
         tableView.registerNib(UINib(nibName: "TableViewCell",bundle: nil), forCellReuseIdentifier: "cell")
         self.clearsSelectionOnViewWillAppear = false
     }
     
     override func viewWillAppear(animated: Bool) {
-        if let keys = userDefault.objectForKey("keys") as? [String] {
+        super.viewWillAppear(animated)
+        if let keys = userDefault.valueForKey("keys") as? [String] {
             self.keys = keys
         }
         self.tableView.reloadData()
-        print(keys)
-        /*if userDefault.arrayForKey("text") != nil{
-            saveText = userDefault.arrayForKey("text")!
-            super.viewWillAppear(animated)
-            tableView.reloadData()
-        }else{
-            print("error")
-        }*/
     }
     
+    @IBAction func plus(){
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.toKey = nil
+    }
+
     @IBAction func reset(){
         let alert = UIAlertController(title: "リセット", message: "OKを押すとデータがリセットされます \n アプリを閉じます", preferredStyle: UIAlertControllerStyle.Alert)
         let action1:UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:{(action:UIAlertAction!) -> Void in
@@ -62,17 +62,15 @@ class TableViewController: UITableViewController ,UIAlertViewDelegate{
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if let keys = self.keys {
             return keys.count
         } else {
+            print("error")
             return 0
         }
     }
@@ -81,14 +79,13 @@ class TableViewController: UITableViewController ,UIAlertViewDelegate{
         
         let tableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
         
-        if let keys = self.keys {
-            let key = keys[indexPath.row]
-            let dictionary = userDefault.objectForKey(key as! String)
-            
-            tableViewCell.cell.text = dictionary!["title"] as? String
-            tableViewCell.subtitle.text = dictionary!["text"] as? String
-            tableViewCell.timeLabel.text = dictionary!["time"] as? String
-        }
+        guard let keys = self.keys else { return UITableViewCell() }
+        let key = keys[indexPath.row]
+        guard let dictionary = userDefault.objectForKey(key) else { return UITableViewCell() }
+        
+        tableViewCell.cell.text = dictionary["title"] as? String
+        tableViewCell.subtitle.text = dictionary["text"] as? String
+        tableViewCell.timeLabel.text = dictionary["time"] as? String
         
         return tableViewCell
     }
@@ -101,68 +98,4 @@ class TableViewController: UITableViewController ,UIAlertViewDelegate{
         //        let viewController: UIViewController = ViewController()
         //        self.presentViewController(viewController, animated: true, completion: nil)
     }
-    
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let vc:ViewController = (segue.destinationViewController as? ViewController)!
-        let keyArray = userDefault.arrayForKey("keys")
-        print(keyArray)
-        if let indexPath = self.tableView.indexPathForSelectedRow{
-            let dictionary: (AnyObject) = saveText[indexPath.row]
-            NSLog("index:%d",indexPath.row)
-            if indexPath.section == 0{
-                vc.titleName = dictionary["title"] as? String
-                vc.text = dictionary["text"] as? String
-                vc.timeCell = dictionary["time"] as? String
-                vc.a = a
-            }
-        }
-        
-    }*/
 }
-
-/*
- // Override to support conditional editing of the table view.
- override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
- // Return false if you do not want the specified item to be editable.
- return true
- }
- */
-
-/*
- // Override to support editing the table view.
- override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
- if editingStyle == .Delete {
- // Delete the row from the data source
- tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
- } else if editingStyle == .Insert {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
- 
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
- // Return false if you do not want the item to be re-orderable.
- return true
- }
- */
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
- // Get the new view controller using segue.destinationViewController.
- // Pass the selected object to the new view controller.
- }
- */
-
-
