@@ -18,6 +18,9 @@ class TableViewController: UITableViewController ,UIAlertViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.leftBarButtonItem = editButtonItem()
+        
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.toKey = nil
         a = 0
@@ -32,30 +35,37 @@ class TableViewController: UITableViewController ,UIAlertViewDelegate{
         }
         self.tableView.reloadData()
     }
-    
-    @IBAction func plus(){
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.toKey = nil
-    }
 
-    @IBAction func reset(){
-        let alert = UIAlertController(title: "リセット", message: "OKを押すとデータがリセットされます \n アプリを閉じます", preferredStyle: UIAlertControllerStyle.Alert)
-        let action1:UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:{(action:UIAlertAction!) -> Void in
-            self.userDefault.removeObjectForKey("title")
-            self.userDefault.removeObjectForKey("text")
-            self.userDefault.removeObjectForKey("time")
-            self.tableView.removeFromSuperview()
-            self.a = 1
-            exit(EXIT_FAILURE)
-        })
-        let action2:UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler:{(action:UIAlertAction!) -> Void in
-            self.a = 0
-            //            exit(EXIT_FAILURE)
-        })
-        alert.addAction(action1)
-        alert.addAction(action2)
-        presentViewController(alert, animated: true, completion: nil)
+//⇩編集
+//    //edit
+//    override func setEditing(editing: Bool, animated: Bool) {
+//        super.setEditing(editing, animated: animated)
+//        self.tableView.editing = editing
+//    }
+//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        return true
+//    }
+//    
+//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//    
+//    }
+
+    //
+    
+    override func tableView(tableView: UITableView,canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
     }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        print(indexPath.row)
+        keys?.removeAtIndex(indexPath.row)
+        userDefault.setObject(keys, forKey: "keys")
+        
+        self.tableView.reloadData()
+    }
+//⇧編集
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

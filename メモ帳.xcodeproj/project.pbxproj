@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3F912AF1CCBC4E8004267B7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F912AE1CCBC4E8004267B7 /* Launch Screen.storyboard */; };
+		A30E9A591CF19ED7004ED5C7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30E9A581CF19ED7004ED5C7 /* Launch Screen.storyboard */; };
 		D8103B7B1CAE17C500811065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8103B7A1CAE17C500811065 /* AppDelegate.swift */; };
 		D8103B7D1CAE17C500811065 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8103B7C1CAE17C500811065 /* ViewController.swift */; };
 		D8103B801CAE17C500811065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8103B7E1CAE17C500811065 /* Main.storyboard */; };
@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A3F912AE1CCBC4E8004267B7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A30E9A581CF19ED7004ED5C7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D8103B771CAE17C500811065 /* メモ帳.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "メモ帳.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8103B7A1CAE17C500811065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8103B7C1CAE17C500811065 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				D8103B861CAE17C500811065 /* Info.plist */,
 				D8103BE41CAE4EDB00811065 /* TableViewCell.swift */,
 				D8103BE51CAE4EDB00811065 /* TableViewCell.xib */,
-				A3F912AE1CCBC4E8004267B7 /* Launch Screen.storyboard */,
+				A30E9A581CF19ED7004ED5C7 /* Launch Screen.storyboard */,
 			);
 			path = "暗記Book";
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 			files = (
 				D8103BE71CAE4EDB00811065 /* TableViewCell.xib in Resources */,
 				D8103B821CAE17C500811065 /* Assets.xcassets in Resources */,
-				A3F912AF1CCBC4E8004267B7 /* Launch Screen.storyboard in Resources */,
+				A30E9A591CF19ED7004ED5C7 /* Launch Screen.storyboard in Resources */,
 				D8103B801CAE17C500811065 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

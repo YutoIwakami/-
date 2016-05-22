@@ -53,11 +53,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="メモ一覧" id="wjY-1g-K3e">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="trash" id="4An-MC-0zx">
-                            <connections>
-                                <action selector="reset" destination="SSl-8R-Atm" id="RwL-h9-XD9"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="kjI-9e-M9B">
                             <connections>
                                 <action selector="plus" destination="SSl-8R-Atm" id="6bc-h4-NNl"/>
